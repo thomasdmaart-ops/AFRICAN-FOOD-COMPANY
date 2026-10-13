@@ -6,6 +6,9 @@
     <title>Product Catalog & Ordering | African Foods Company</title>
     <link rel="stylesheet" href="styles.css">
     <script src="./javascript/validation.js" defer></script>
+    <script src="./javascript/lightbox.js" defer></script>
+    <script src="./javascript/main.js" defer></script>
+    <script src="./javascript/search.js" defer></script>
 </head>
 <body>
     <header class="main-header">
@@ -109,42 +112,41 @@
                     </div>
                 </div>
 
-                <!-- NEW Product 5 -->
-                <div class="product-card">
-                    <div class="product-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1603048588665-791ca8aea617?auto=format&fit=crop&w=600&q=80" alt="Pure Sunflower Oil 20L" class="product-img">
-                        <span class="category-badge">Oils & Cooking Essentials</span>
-                    </div>
-                    <div class="product-details">
-                        <div>
-                            <h4>Pure Sunflower Cooking Oil (20L Drum)</h4>
-                            <p class="product-desc">Triple-refined high-clarity sunflower oil suited for commercial frying, baking, and wholesale distribution.</p>
-                        </div>
-                        <div class="price-row">
-                            <span class="price">R 640.00</span>
-                            <button class="btn btn-gold" onclick="addToOrder('Sunflower Oil 20L', 640, 'https://images.unsplash.com/photo-1603048588665-791ca8aea617?auto=format&fit=crop&w=120&q=80')">Add to Order</button>
-                        </div>
-                    </div>
-                </div>
+                <!-- Product 5: Pure Sunflower Cooking Oil -->
+<div class="product-card">
+    <div class="product-img-wrapper">
+        <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=600&q=80" alt="Pure Sunflower Oil 20L" class="product-img">
+        <span class="category-badge">Oils & Cooking Essentials</span>
+    </div>
+    <div class="product-details">
+        <div>
+            <h4>Pure Sunflower Cooking Oil (20L Drum)</h4>
+            <p class="product-desc">Triple-refined high-clarity sunflower oil suited for commercial frying, baking, and wholesale distribution.</p>
+        </div>
+        <div class="price-row">
+            <span class="price">R 640.00</span>
+            <button class="btn btn-gold" onclick="addToOrder('Sunflower Oil 20L', 640, 'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=120&q=80')">Add to Order</button>
+        </div>
+    </div>
+</div>
 
-                <!-- NEW Product 6 -->
-                <div class="product-card">
-                    <div class="product-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1598170845058-12ef4a457c11?auto=format&fit=crop&w=600&q=80" alt="Farm Fresh Potato Sack" class="product-img">
-                        <span class="category-badge">Fresh Produce</span>
-                    </div>
-                    <div class="product-details">
-                        <div>
-                            <h4>Class 1 Fresh Potatoes (10kg Sack)</h4>
-                            <p class="product-desc">Freshly harvested washing potatoes sourced directly from regional farming partners in Eastern Cape and Limpopo.</p>
-                        </div>
-                        <div class="price-row">
-                            <span class="price">R 95.00</span>
-                            <button class="btn btn-gold" onclick="addToOrder('Fresh Potatoes 10kg', 95, 'https://images.unsplash.com/photo-1598170845058-12ef4a457c11?auto=format&fit=crop&w=120&q=80')">Add to Order</button>
-                        </div>
-                    </div>
-                </div>
-
+<!-- Product 6: Class 1 Fresh Potatoes -->
+<div class="product-card">
+    <div class="product-img-wrapper">
+        <img src="https://images.unsplash.com/photo-1518977676601-b5ff82803c3b?auto=format&fit=crop&w=600&q=80" alt="Farm Fresh Potato Sack" class="product-img">
+        <span class="category-badge">Fresh Produce</span>
+    </div>
+    <div class="product-details">
+        <div>
+            <h4>Class 1 Fresh Potatoes (10kg Sack)</h4>
+            <p class="product-desc">Freshly harvested washing potatoes sourced directly from regional farming partners in Eastern Cape and Limpopo.</p>
+        </div>
+        <div class="price-row">
+            <span class="price">R 95.00</span>
+            <button class="btn btn-gold" onclick="addToOrder('Fresh Potatoes 10kg', 95, 'https://images.unsplash.com/photo-1518977676601-b5ff82803c3b?auto=format&fit=crop&w=120&q=80')">Add to Order</button>
+        </div>
+    </div>
+</div>
                 <!-- NEW Product 7 -->
                 <div class="product-card">
                     <div class="product-img-wrapper">
