@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOP-04: Incident & Breach Management | African Foods Company</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./javascript/validation.js" defer></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>African Foods Company Ltd</h1>
+                <span>IT Governance & Operations Portal</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">← Back to Portal Main Page</a>
+                <a href="#incident-steps">Response Steps</a>
+                <a href="#popia">POPIA Disclosure</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="sop-document">
+            <div class="doc-header">
+                <span class="sop-badge">Document Code: SOP-2026-SEC04</span>
+                <h2>SOP 4: IT Security Breach & Cyber Incident Management</h2>
+                <p><strong>Target Scope:</strong> Enterprise Cybersecurity, All Endpoints & Network Environments</p>
+            </div>
+
+            <section class="doc-section">
+                <h3>1. Specific Purpose & Objective</h3>
+                <p>Defines containment, forensic logging, user notification, and system restoration procedures during ransomware attacks, data leaks, or unauthorized access attempts.</p>
+            </section>
+
+            <section class="doc-section">
+                <h3>2. Operational Importance</h3>
+                <p>Protects proprietary food processing recipes, supplier pricing contracts, and employee personal data under South Africa's POPIA Act. Standardized containment limits ransomware spread and preserves evidentiary audit trails.</p>
+            </section>
+
+            <section class="doc-section" id="incident-steps">
+                <h3>3. Mandatory Response Workflow</h3>
+                <ol>
+                    <li><strong>15-Minute Mandatory Escalation:</strong> Any user or technician detecting suspicious file encryption, unexpected login prompts, or phishing attempts must report it within 15 minutes to <code>security@africanfoods.co.za</code>.</li>
+                    <li><strong>Immediate System Isolation:</strong> IT Security Analysts are authorized to isolate infected workstations or entire branch subnets from the network immediately upon detecting active ransomware activity.</li>
+                    <li><strong>Forensic Logging & Containment:</strong> Preserve memory dumps and audit logs for forensic analysis prior to endpoint re-imaging.</li>
+                    <li><strong>System Restoration:</strong> Re-build compromised endpoints using golden corporate images after full malware eradication confirmation.</li>
+                </ol>
+            </section>
+
+            <section class="doc-section" id="popia">
+                <h3>4. Legal & Regulatory Obligations (POPIA)</h3>
+                <ul>
+                    <li><strong>Regulatory Disclosure:</strong> Any security breach involving customer, employee, or supplier PII must be formally reported to the South African Information Regulator and affected parties in full compliance with POPIA guidelines.</li>
+                    <li><strong>Executive Briefing:</strong> The Cybersecurity & Compliance Lead must brief the CIO and Legal Officer within 2 hours of confirming an enterprise data leak.</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 African Foods Company Ltd | IT Governance Unit</p>
+        </div>
+    </footer>
+</body>
+</html>

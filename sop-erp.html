@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOP-02: Server & ERP Maintenance | African Foods Company</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./javascript/validation.js" defer></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>African Foods Company Ltd</h1>
+                <span>IT Governance & Operations Portal</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="products.html">Order Products</a>
+                <a href="stores.html">Store Locations</a>
+                <a href="contact.html">Customer Inquiries</a>
+                <a href="sops.html" class="btn-staff">IT SOPs & Policies</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="sop-document">
+            <div class="doc-header">
+                <span class="sop-badge">Document Code: SOP-2026-ERP02</span>
+                <h2>SOP 2: Central Server, ERP & Database Maintenance</h2>
+                <p><strong>Target Scope:</strong> Enterprise Core Systems & Central Datacenter Operations</p>
+            </div>
+
+            <section class="doc-section">
+                <h3>1. Specific Purpose & Objective</h3>
+                <p>Governs scheduled operating system patching, database indexing, daily data backups, and capacity monitoring for the centralized Enterprise Resource Planning (ERP) platform.</p>
+            </section>
+
+            <section class="doc-section">
+                <h3>2. Operational Importance</h3>
+                <p>Guarantees data integrity for high-volume sales transactions, finance records, and nationwide supplier orders. Unplanned server outages halt orders across all branches; structured maintenance prevents corruption and maintains operational stability.</p>
+            </section>
+
+            <section class="doc-section" id="schedule">
+                <h3>3. Maintenance Window & Workflow</h3>
+                <ol>
+                    <li><strong>Scheduled Maintenance Window:</strong> Executed strictly during off-peak hours (Sundays between 01:00 AM – 04:00 AM SAST).</li>
+                    <li><strong>Database Index Optimization:</strong> Database Administrators (DBAs) must run automated index defragmentation and query performance tuning weekly.</li>
+                    <li><strong>OS & ERP Patching:</strong> Systems Administrators execute pre-tested vendor patch sets after obtaining formal Tier 3 Change Control authorization.</li>
+                </ol>
+            </section>
+
+            <section class="doc-section" id="backup">
+                <h3>4. Backup & Capacity Requirements</h3>
+                <ul>
+                    <li><strong>Full Backup Schedule:</strong> Daily full backups at 23:00 SAST with transactional log backups every 15 minutes.</li>
+                    <li><strong>Encryption & Storage:</strong> Backup archives are encrypted with AES-256 and replicated offsite to secondary disaster recovery storage.</li>
+                    <li><strong>Storage Monitoring:</strong> Capacity alerts trigger automatically when server storage exceeds 80% utilization.</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 African Foods Company Ltd | IT Governance Unit</p>
+        </div>
+    </footer>
+</body>
+</html>

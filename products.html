@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog & Ordering | African Foods Company</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./javascript/validation.js" defer></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-flex">
+            <div class="logo">
+                <h1>African Foods Company Ltd</h1>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="products.html">Order Products</a>
+                <a href="stores.html">Store Locations</a>
+                <a href="contact.html">Customer Inquiries</a>
+                <a href="sops.html" class="btn-staff">IT SOPs & Policies</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Page Header -->
+        <section class="page-title">
+            <h2>Product Catalog & Online Order Requisition</h2>
+            <p>Select products below to build your enterprise order requisition. All items are dispatched from our regional hubs[cite: 7].</p>
+        </section>
+
+        <!-- Main Workspace Layout Grid -->
+        <div class="product-catalog-layout">
+            
+            <!-- Left Column: Product Cards Grid -->
+            <div class="product-grid">
+                
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1587593810167-a84920ea0781?auto=format&fit=crop&w=600&q=80" alt="Frozen Chicken Bulk Pack" class="product-img">
+                        <span class="category-badge">Poultry & Cold Chain</span>
+                    </div>
+                    <div class="product-details">
+                        <div>
+                            <h4>Premium Frozen Chicken Pack (10kg)</h4>
+                            <p class="product-desc">Grade-A IQF whole chicken portions, flash-frozen and temperature-monitored under HACCP standards.</p>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">R 450.00</span>
+                            <button class="btn btn-gold" onclick="addToOrder('Frozen Chicken 10kg', 450, 'https://images.unsplash.com/photo-1587593810167-a84920ea0781?auto=format&fit=crop&w=120&q=80')">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=600&q=80" alt="Fresh Dairy Milk Crate" class="product-img">
+                        <span class="category-badge">Dairy Products</span>
+                    </div>
+                    <div class="product-details">
+                        <div>
+                            <h4>Fresh Full Cream Milk Crate (10 x 2L)</h4>
+                            <p class="product-desc">Farm-fresh pasteurized full cream milk delivered in sealed distribution crates for wholesale stockists.</p>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">R 320.00</span>
+                            <button class="btn btn-gold" onclick="addToOrder('Milk Crate (10x2L)', 320, 'https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=120&q=80')">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=600&q=80" alt="Bulk Maize Meal" class="product-img">
+                        <span class="category-badge">Grains & Staples</span>
+                    </div>
+                    <div class="product-details">
+                        <div>
+                            <h4>Wholesale Super Maize Meal (25kg)</h4>
+                            <p class="product-desc">Super-refined white maize meal, fortified with essential vitamins and packaged for extended shelf life.</p>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">R 210.00</span>
+                            <button class="btn btn-gold" onclick="addToOrder('Maize Meal 25kg', 210, 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=120&q=80')">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=600&q=80" alt="Fresh Farm Cheese Block" class="product-img">
+                        <span class="category-badge">Dairy Products</span>
+                    </div>
+                    <div class="product-details">
+                        <div>
+                            <h4>Cheddar Cheese Block (5kg Bulk)</h4>
+                            <p class="product-desc">Aged cheddar cheese block sealed in moisture-lock vacuum packaging for optimal freshness.</p>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">R 580.00</span>
+                            <button class="btn btn-gold" onclick="addToOrder('Cheddar Cheese 5kg', 580, 'https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=120&q=80')">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEW Product 5 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1603048588665-791ca8aea617?auto=format&fit=crop&w=600&q=80" alt="Pure Sunflower Oil 20L" class="product-img">
+                        <span class="category-badge">Oils & Cooking Essentials</span>
+                    </div>
+                    <div class="product-details">
+                        <div>
+                            <h4>Pure Sunflower Cooking Oil (20L Drum)</h4>
+                            <p class="product-desc">Triple-refined high-clarity sunflower oil suited for commercial frying, baking, and wholesale distribution.</p>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">R 640.00</span>
+                            <button class="btn btn-gold" onclick="addToOrder('Sunflower Oil 20L', 640, 'https://images.unsplash.com/photo-1603048588665-791ca8aea617?auto=format&fit=crop&w=120&q=80')">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEW Product 6 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1598170845058-12ef4a457c11?auto=format&fit=crop&w=600&q=80" alt="Farm Fresh Potato Sack" class="product-img">
+                        <span class="category-badge">Fresh Produce</span>
+                    </div>
+                    <div class="product-details">
+                        <div>
+                            <h4>Class 1 Fresh Potatoes (10kg Sack)</h4>
+                            <p class="product-desc">Freshly harvested washing potatoes sourced directly from regional farming partners in Eastern Cape and Limpopo.</p>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">R 95.00</span>
+                            <button class="btn btn-gold" onclick="addToOrder('Fresh Potatoes 10kg', 95, 'https://images.unsplash.com/photo-1598170845058-12ef4a457c11?auto=format&fit=crop&w=120&q=80')">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEW Product 7 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=600&q=80" alt="Bulk Frozen Beef Sausage" class="product-img">
+                        <span class="category-badge">Poultry & Cold Chain</span>
+                    </div>
+                    <div class="product-details">
+                        <div>
+                            <h4>Traditional Beef Boerewors (5kg Pack)</h4>
+                            <p class="product-desc">Premium spiced beef sausage made with choice meat cuts, flash-frozen for long-distance transport integrity.</p>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">R 490.00</span>
+                            <button class="btn btn-gold" onclick="addToOrder('Beef Boerewors 5kg', 490, 'https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=120&q=80')">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEW Product 8 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=600&q=80" alt="Bulk Long Grain White Rice" class="product-img">
+                        <span class="category-badge">Grains & Staples</span>
+                    </div>
+                    <div class="product-details">
+                        <div>
+                            <h4>Parboiled Long Grain Rice (25kg Bag)</h4>
+                            <p class="product-desc">High-yield parboiled white rice packed in heavy-duty woven sacks for bulk commercial kitchens and retail sales.</p>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">R 340.00</span>
+                            <button class="btn btn-gold" onclick="addToOrder('Parboiled Rice 25kg', 340, 'https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=120&q=80')">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEW Product 9 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=600&q=80" alt="Fresh Orange Crate" class="product-img">
+                        <span class="category-badge">Fresh Produce</span>
+                    </div>
+                    <div class="product-details">
+                        <div>
+                            <h4>Juicy Valencia Oranges (15kg Crate)</h4>
+                            <p class="product-desc">Export-quality fresh citrus oranges picked and sorted for retail markets and commercial juice producers.</p>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">R 125.00</span>
+                            <button class="btn btn-gold" onclick="addToOrder('Valencia Oranges 15kg', 125, 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=120&q=80')">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEW Product 10 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="Bulk White Sugar" class="product-img">
+                        <span class="category-badge">Grains & Staples</span>
+                    </div>
+                    <div class="product-details">
+                        <div>
+                            <h4>Refined Pure White Sugar (25kg Bag)</h4>
+                            <p class="product-desc">Premium refined cane sugar, moisture-sealed for commercial food processing, bakeries, and retail sale.</p>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">R 395.00</span>
+                            <button class="btn btn-gold" onclick="addToOrder('White Sugar 25kg', 395, 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=120&q=80')">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEW Product 11 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1621263764928-df1444c5e859?auto=format&fit=crop&w=600&q=80" alt="Farm Fresh Eggs Box" class="product-img">
+                        <span class="category-badge">Dairy Products</span>
+                    </div>
+                    <div class="product-details">
+                        <div>
+                            <h4>Large Grade-A Eggs Case (30 Dozen)</h4>
+                            <p class="product-desc">Bulk wholesale egg case (360 eggs total) packed in protective corrugated trays for safe distribution.</p>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">R 720.00</span>
+                            <button class="btn btn-gold" onclick="addToOrder('Eggs Case (30 Dozen)', 720, 'https://images.unsplash.com/photo-1621263764928-df1444c5e859?auto=format&fit=crop&w=120&q=80')">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEW Product 12 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1546548970-71785318a17b?auto=format&fit=crop&w=600&q=80" alt="100% Fruit Juice Case" class="product-img">
+                        <span class="category-badge">Beverages & Juices</span>
+                    </div>
+                    <div class="product-details">
+                        <div>
+                            <h4>100% Blend Fruit Juice Box (12 x 1L)</h4>
+                            <p class="product-desc">UHT long-life 100% fruit juice blend case, cold-storage compatible and ready for supermarket display.</p>
+                        </div>
+                        <div class="price-row">
+                            <span class="price">R 260.00</span>
+                            <button class="btn btn-gold" onclick="addToOrder('Fruit Juice Case (12x1L)', 260, 'https://images.unsplash.com/photo-1546548970-71785318a17b?auto=format&fit=crop&w=120&q=80')">Add to Order</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Order Card / Form Panel -->
+            <aside class="order-summary-box">
+                <div class="order-summary-header">
+                    <h3>Order Requisition Form</h3>
+                    <p>Review items before submitting your requisition.</p>
+                </div>
+
+                <!-- Dispatch Branch Selection -->
+                <div class="form-group">
+                    <label for="dispatchHub">Preferred Fulfillment Hub:</label>
+                    <select id="dispatchHub" class="form-input">
+                        <option value="capetown">Cape Town HQ & Datacenter</option>
+                        <option value="gqeberha">Gqeberha Cold-Storage Hub</option>
+                        <option value="durban">Durban Logistics Center</option>
+                        <option value="polokwane">Polokwane Regional Depot</option>
+                    </select>
+                </div>
+
+                <!-- Selected Items List -->
+                <div id="cartList" class="cart-items-wrapper">
+                    <p class="empty-cart-msg">Your order cart is currently empty.</p>
+                </div>
+
+                <!-- Calculation Summary -->
+                <div class="cart-total-section">
+                    <div class="summary-line">
+                        <span>Total Items Selected:</span>
+                        <strong id="itemCount">0</strong>
+                    </div>
+                    <div class="summary-line total-price-line">
+                        <span>Requisition Total:</span>
+                        <strong class="total-price">R <span id="cartTotal">0.00</span></strong>
+                    </div>
+                </div>
+
+                <!-- Action Button -->
+                <button class="btn btn-gold checkout-btn" onclick="checkout()">Submit Requisition Request</button>
+            </aside>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 African Foods Company Ltd | Enterprise Operations Unit</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Script -->
+    <script>
+        let total = 0;
+        let items = [];
+
+        function addToOrder(name, price, imgUrl) {
+            items.push({ name, price, imgUrl });
+            total += price;
+            updateCart();
+        }
+
+        function removeFromOrder(index) {
+            total -= items[index].price;
+            items.splice(index, 1);
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartWrapper = document.getElementById('cartList');
+            const totalSpan = document.getElementById('cartTotal');
+            const countSpan = document.getElementById('itemCount');
+
+            countSpan.innerText = items.length;
+            totalSpan.innerText = total.toFixed(2);
+
+            if (items.length === 0) {
+                cartWrapper.innerHTML = '<p class="empty-cart-msg">Your order cart is currently empty.</p>';
+                return;
+            }
+
+            cartWrapper.innerHTML = '';
+            items.forEach((item, index) => {
+                const div = document.createElement('div');
+                div.className = 'cart-item-row';
+                div.innerHTML = `
+                    <img src="${item.imgUrl}" alt="${item.name}" class="cart-thumb">
+                    <div class="cart-item-info">
+                        <strong>${item.name}</strong>
+                        <span class="cart-item-price">R ${item.price.toFixed(2)}</span>
+                    </div>
+                    <button class="btn-remove" title="Remove Item" onclick="removeFromOrder(${index})">&times;</button>
+                `;
+                cartWrapper.appendChild(div);
+            });
+        }
+
+        function checkout() {
+            const hubSelect = document.getElementById('dispatchHub');
+            const hubName = hubSelect.options[hubSelect.selectedIndex].text;
+
+            if (items.length === 0) {
+                alert('Please select at least one item from the catalog before submitting.');
+            } else {
+                alert(`Order Requisition Submitted!\n\nFulfillment Hub: ${hubName}\nTotal Amount: R ${total.toFixed(2)}\n\nAn official confirmation has been generated for processing.`);
+                items = [];
+                total = 0;
+                updateCart();
+            }
+        }
+    </script>
+</body>
+</html>

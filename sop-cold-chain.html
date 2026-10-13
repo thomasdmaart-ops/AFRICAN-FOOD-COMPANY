@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOP-01: Cold-Chain & Inventory Management | African Foods Company</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./javascript/validation.js" defer></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>African Foods Company Ltd</h1>
+                <span>IT Governance & Operations Portal</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">← Back to Portal Main Page</a>
+                <a href="#procedure">Procedure Steps</a>
+                <a href="#compliance">POPIA & HACCP Compliance</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="sop-document">
+            <div class="doc-header">
+                <span class="sop-badge">Document Code: SOP-2026-CC01</span>
+                <h2>SOP 1: Cold-Chain & Inventory Tracking System Management</h2>
+                <p><strong>Target Scope:</strong> Core Supply Chain, Regional Cold-Storage Warehouses & Distribution Hubs</p>
+            </div>
+
+            <section class="doc-section">
+                <h3>1. Specific Purpose & Objective</h3>
+                <p>Establishes mandatory technical protocols for maintaining, syncing, calibrating, and auditing IoT temperature sensors, handheld barcode scanners, and central inventory databases across all regional distribution hubs.</p>
+            </section>
+
+            <section class="doc-section">
+                <h3>2. Operational Importance</h3>
+                <p>Prevents food spoilage, bulk stock loss, and regulatory non-compliance by maintaining live telemetry and real-time inventory tracking. Unhandled system failures without standardized recovery protocols lead to stock discrepancies, delivery delays, and major financial losses.</p>
+            </section>
+
+            <section class="doc-section" id="procedure">
+                <h3>3. Step-by-Step Technical Procedure</h3>
+                <ol>
+                    <li><strong>Daily IoT Sensor Audit:</strong> Level 2 Systems Technicians must perform daily diagnostic checks on cold-storage warehouse IoT telemetry devices at 06:00 AM.</li>
+                    <li><strong>Barcode Scanner Provisioning:</strong> All ruggedized handheld barcode terminals must sync with local warehouse Wi-Fi endpoints and verify active sessions with the central ERP database before shift startup.</li>
+                    <li><strong>Data Telemetry Syncing:</strong> Temperature and humidity telemetry data must automatically upload to the central database at 5-minute intervals. If connection drops, local storage caching holds records up to 72 hours.</li>
+                    <li><strong>Fault Escalation:</strong> Sensor drift (>±0.5°C threshold) or offline telemetry triggers an immediate P2 ticket to the Service Desk for technician site dispatch.</li>
+                </ol>
+            </section>
+
+            <section class="doc-section" id="compliance">
+                <h3>4. Governance & Compliance Standards</h3>
+                <ul>
+                    <li><strong>HACCP Traceability:</strong> All batch movements and temperature logs must maintain unbroken electronic audit trails for regulatory compliance.</li>
+                    <li><strong>POPIA Data Integrity:</strong> Vendor and driver shipping details processed on warehouse terminals must adhere to encryption standards (AES-256).</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 African Foods Company Ltd | IT Governance Unit</p>
+        </div>
+    </footer>
+</body>
+</html>

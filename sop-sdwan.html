@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOP-03: SD-WAN & Branch Connectivity | African Foods Company</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./javascript/validation.js" defer></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>African Foods Company Ltd</h1>
+                <span>IT Governance & Operations Portal</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="products.html">Order Products</a>
+                <a href="stores.html">Store Locations</a>
+                <a href="contact.html">Customer Inquiries</a>
+                <a href="sops.html" class="btn-staff">IT SOPs & Policies</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="sop-document">
+            <div class="doc-header">
+                <span class="sop-badge">Document Code: SOP-2026-NET03</span>
+                <h2>SOP 3: Multi-Branch SD-WAN Network & Connectivity Operations</h2>
+                <p><strong>Target Scope:</strong> Network Infrastructure & Multi-Branch WAN Links</p>
+            </div>
+
+            <section class="doc-section">
+                <h3>1. Specific Purpose & Objective</h3>
+                <p>Standardizes management, automated failover testing, and encryption parameters for secure branch-to-headquarters network tunnels and IPSec VPN connections.</p>
+            </section>
+
+            <section class="doc-section">
+                <h3>2. Operational Importance</h3>
+                <p>Disrupted remote site links stop regional dispatch desks from processing shipping manifests and processing inventory orders. This SOP enforces automated failover rules to secondary cellular links, guaranteeing uninterrupted communication.</p>
+            </section>
+
+            <section class="doc-section" id="failover">
+                <h3>3. Failover Protocol & Operational Rules</h3>
+                <ol>
+                    <li><strong>Primary Fiber Monitoring:</strong> Senior Network Specialists continuously monitor primary fiber link latency and packet loss rates across all branch routers.</li>
+                    <li><strong>Automated Cellular Failover:</strong> If primary fiber link loss exceeds 3 seconds, SD-WAN routers automatically re-route traffic over secondary encrypted LTE/5G links without dropping active ERP sessions.</li>
+                    <li><strong>Monthly Failover Drill:</strong> Network teams execute mandatory monthly failover tests outside core business hours to verify link switching capability.</li>
+                </ol>
+            </section>
+
+            <section class="doc-section" id="security">
+                <h3>4. Security & Encryption Controls</h3>
+                <ul>
+                    <li><strong>IPSec Standards:</strong> All site-to-site WAN tunnels must enforce IPsec encryption utilizing AES-256 and TLS 1.3 parameters.</li>
+                    <li><strong>Bandwidth Prioritization (QoS):</strong> Enterprise ERP data and cold-chain telemetry receive priority traffic queuing over standard office web browsing.</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 African Foods Company Ltd | IT Governance Unit</p>
+        </div>
+    </footer>
+</body>
+</html>

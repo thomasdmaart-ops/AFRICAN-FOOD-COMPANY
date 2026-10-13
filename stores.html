@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Locations & Live Map | African Foods Company</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./javascript/validation.js" defer></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-flex">
+            <div class="logo">
+                <h1>African Foods Company Ltd</h1>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="products.html">Order Products</a>
+                <a href="stores.html">Store Locations</a>
+                <a href="contact.html">Customer Inquiries</a>
+                <a href="sops.html" class="btn-staff">IT SOPs & Policies</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="page-title">
+            <h2>Our Store Locations & Enterprise Hubs</h2>
+            <p>Find your nearest African Foods Company retail stockist or cold-storage distribution center across South Africa.</p>
+        </section>
+
+        <!-- Live Location Tracker Banner -->
+        <section class="geo-banner">
+            <div class="geo-content">
+                <h3>📍 Find Your Nearest Branch Automatically</h3>
+                <p>Allow location access to highlight your closest African Foods Company facility.</p>
+                <button class="btn btn-gold" onclick="findNearestStore()">Detect My Live Location</button>
+                <p id="geoStatus" class="geo-status"></p>
+            </div>
+        </section>
+
+        <!-- 4-Site Store Grid Aligned with Project NetBridge -->
+        <section class="store-grid">
+            
+            <!-- Site 1: Cape Town Head Office & Central Datacenter -->
+            <div class="store-card" id="branch-capetown">
+                <span class="badge-featured">Corporate HQ & Datacenter</span>
+                <h3>1. Cape Town Head Office & Central Hub</h3>
+                <p><strong>Address:</strong> 88 Montague Drive, Montague Gardens, Cape Town, 7441</p>
+                <p><strong>Trading Hours:</strong> Mon - Fri: 07:00 - 17:00 | Sat: 08:00 - 13:00</p>
+                <p><strong>Phone:</strong> (021) 555 0144</p>
+                <p><strong>Email:</strong> capetown@africanfoods.co.za</p>
+                <span class="tag wholesale">Corporate HQ & Primary Hosting</span>
+
+                <div class="map-container">
+                    <iframe 
+                        title="Cape Town Hub Map"
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=18.5000%2C-33.8800%2C18.5400%2C-33.8400&amp;layer=mapnik&amp;marker=-33.8615%2C18.5200" 
+                        style="border: 0; width: 100%; height: 180px; border-radius: 4px; margin-top: 10px;">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Site 2: Durban Branch -->
+            <div class="store-card" id="branch-durban">
+                <span class="badge-featured">KwaZulu-Natal Hub</span>
+                <h3>2. Durban Coastal Logistics & Processing Center</h3>
+                <p><strong>Address:</strong> 22 Prospecton Road, Isipingo, Durban, 4110</p>
+                <p><strong>Trading Hours:</strong> Mon - Fri: 06:30 - 17:30 | Sat: 07:30 - 13:00</p>
+                <p><strong>Phone:</strong> (031) 555 0177</p>
+                <p><strong>Email:</strong> durban@africanfoods.co.za</p>
+                <span class="tag wholesale">Bulk Processing & Logistics</span>
+
+                <div class="map-container">
+                    <iframe 
+                        title="Durban Hub Map"
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=30.9000%2C-30.0100%2C30.9500%2C-29.9600&amp;layer=mapnik&amp;marker=-29.9850%2C30.9250" 
+                        style="border: 0; width: 100%; height: 180px; border-radius: 4px; margin-top: 10px;">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Site 3: Gqeberha Branch -->
+            <div class="store-card" id="branch-gqeberha">
+                <span class="badge-featured">Eastern Cape Hub</span>
+                <h3>3. Gqeberha Cold-Storage & Regional Hub</h3>
+                <p><strong>Address:</strong> 14 Deal Party Road, Deal Party, Gqeberha, 6001</p>
+                <p><strong>Trading Hours:</strong> Mon - Fri: 07:00 - 17:00 | Sat: 08:00 - 13:00</p>
+                <p><strong>Phone:</strong> (041) 555 0123</p>
+                <p><strong>Email:</strong> gqeberha@africanfoods.co.za</p>
+                <span class="tag wholesale">Cold Storage & Regional Distribution</span>
+                
+                <div class="map-container">
+                    <iframe 
+                        title="Gqeberha Hub Map"
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=25.6000%2C-33.9200%2C25.6500%2C-33.8800&amp;layer=mapnik&amp;marker=-33.9015%2C25.6231" 
+                        style="border: 0; width: 100%; height: 180px; border-radius: 4px; margin-top: 10px;">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Site 4: Polokwane Branch -->
+            <div class="store-card" id="branch-polokwane">
+                <span class="badge-featured">Limpopo Hub</span>
+                <h3>4. Polokwane Northern Regional Depot</h3>
+                <p><strong>Address:</strong> 52 Landdros Mare Street, Industrial Park, Polokwane, 0699</p>
+                <p><strong>Trading Hours:</strong> Mon - Fri: 07:00 - 17:00 | Sat: 08:00 - 13:00</p>
+                <p><strong>Phone:</strong> (015) 555 0188</p>
+                <p><strong>Email:</strong> polokwane@africanfoods.co.za</p>
+                <span class="tag retail">Regional Stockist & Distribution</span>
+
+                <div class="map-container">
+                    <iframe 
+                        title="Polokwane Hub Map"
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=29.4300%2C-23.9200%2C29.4700%2C-23.8800&amp;layer=mapnik&amp;marker=-23.9000%2C29.4500" 
+                        style="border: 0; width: 100%; height: 180px; border-radius: 4px; margin-top: 10px;">
+                    </iframe>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 African Foods Company Ltd | Enterprise Operations Unit</p>
+        </div>
+    </footer>
+
+    <!-- Geolocation Logic covering all 4 proposal regions -->
+    <script>
+        function findNearestStore() {
+            const status = document.getElementById('geoStatus');
+            status.innerText = "Detecting your current location...";
+
+            if (!navigator.geolocation) {
+                status.innerText = "Geolocation is not supported by your browser.";
+            } else {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const lat = position.coords.latitude;
+                        const lon = position.coords.longitude;
+                        status.innerHTML = `<strong>Location Detected!</strong> (Coordinates: ${lat.toFixed(2)}, ${lon.toFixed(2)}). Highlighting your closest regional facility below:`;
+                        
+                        // Regional bounding rules for Cape Town, Durban, Gqeberha, and Polokwane
+                        if (lat < -22.0 && lat > -25.0) {
+                            highlightBranch('branch-polokwane');
+                        } else if (lat < -28.0 && lat > -31.5 && lon > 29.5) {
+                            highlightBranch('branch-durban');
+                        } else if (lat < -32.5 && lon > 24.0 && lon < 27.5) {
+                            highlightBranch('branch-gqeberha');
+                        } else {
+                            // Default to Head Office (Cape Town)
+                            highlightBranch('branch-capetown');
+                        }
+                    },
+                    () => {
+                        status.innerText = "Unable to retrieve your precise location. Please select a branch from the list.";
+                    }
+                );
+            }
+        }
+
+        function highlightBranch(id) {
+            document.querySelectorAll('.store-card').forEach(card => {
+                card.style.border = "1px solid #ddd";
+                card.style.backgroundColor = "#ffffff";
+            });
+            const nearest = document.getElementById(id);
+            if (nearest) {
+                nearest.style.border = "3px solid #d4af37";
+                nearest.style.backgroundColor = "#fffdf0";
+                nearest.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
