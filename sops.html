@@ -5,30 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IT SOPs & Policies | African Foods Company</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Enforce Authentication Guard before rendering page -->
+    <script src="./javascript/auth.js"></script>
+    <script>
+        checkAuth();
+    </script>
     <script src="./javascript/validation.js" defer></script>
     <script src="./javascript/lightbox.js" defer></script>
     <script src="./javascript/main.js" defer></script>
     <script src="./javascript/search.js" defer></script>
-</head>
 </head>
 <body>
     <header class="main-header">
         <div class="container header-flex">
             <div class="logo">
                 <h1>African Foods Company Ltd</h1>
+                <span>IT Governance & Operations Portal</span>
             </div>
+            <!-- Restricted Navigation for Employees Only -->
             <nav class="nav-links">
-                <a href="index.html" class="active">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="products.html">Order Products</a>
-                <a href="stores.html">Store Locations</a>
-                <a href="contact.html">Customer Inquiries</a>
-                <a href="sops.html" class="btn-staff">IT SOPs & Policies</a>
+                <a href="sops.html" class="active">SOP Index</a>
+                <a href="sop-cold-chain.html">SOP-01</a>
+                <a href="sop-erp.html">SOP-02</a>
+                <a href="sop-sdwan.html">SOP-03</a>
+                <a href="sop-branch.html">SOP-04</a>
+                <button onclick="logout()" class="btn btn-dark" style="margin-left: 15px; padding: 6px 14px; font-size: 14px;">Log Out</button>
             </nav>
         </div>
     </header>
 
-    <!-- Custom Green Header Banner matching your snippet -->
+    <!-- Custom Green Header Banner -->
     <section class="sop-banner-section">
         <div class="container">
             <div class="sop-badge-title">IT SOPs & Policies</div>
@@ -39,7 +45,7 @@
         <!-- Page Description -->
         <section class="page-title">
             <h2>Standard Operating Procedures & Infrastructure Governance</h2>
-            <p>Official IT operational procedures, security policies, and cold-chain network management standards for Project NetBridge enterprise sites.</p>
+            <p>Official IT operational procedures, security policies, and cold-chain network management standards for Project NetBridge enterprise sites[cite: 9].</p>
         </section>
 
         <!-- Main Content Area -->
@@ -66,11 +72,11 @@
                         <h3>Site-to-Site IPsec VPN & Regional Tunnel Governance</h3>
                     </div>
                     <div class="sop-card-body">
-                        <p><strong>Scope:</strong> Cape Town HQ, Durban, Gqeberha, and Polokwane branch locations.</p>
+                        <p><strong>Scope:</strong> Cape Town HQ, Durban, Gqeberha, and Polokwane branch locations[cite: 9].</p>
                         <ul>
-                            <li><strong>Encrypted Tunnels:</strong> All inter-site traffic between branch FortiGate firewalls and Cape Town HQ must route through AES-256 encrypted IPsec VPN tunnels.</li>
-                            <li><strong>Centralized DHCP:</strong> Branch DHCP scopes are managed centrally from the Cape Town core network stack. Local overrides are strictly prohibited without IT Ops sign-off.</li>
-                            <li><strong>Redundancy:</strong> Dual-WAN failover links must be tested on the 1st Saturday of each month at 02:00 SAST.</li>
+                            <li><strong>Encrypted Tunnels:</strong> All inter-site traffic between branch FortiGate firewalls and Cape Town HQ must route through AES-256 encrypted IPsec VPN tunnels[cite: 9].</li>
+                            <li><strong>Centralized DHCP:</strong> Branch DHCP scopes are managed centrally from the Cape Town core network stack. Local overrides are strictly prohibited without IT Ops sign-off[cite: 9].</li>
+                            <li><strong>Redundancy:</strong> Dual-WAN failover links must be tested on the 1st Saturday of each month at 02:00 SAST[cite: 9].</li>
                         </ul>
                     </div>
                 </article>
@@ -82,10 +88,10 @@
                         <h3>Sage ERP & Central Database Access Control</h3>
                     </div>
                     <div class="sop-card-body">
-                        <p><strong>Scope:</strong> Database Administrators, Finance, and Stock Management Personnel.</p>
+                        <p><strong>Scope:</strong> Database Administrators, Finance, and Stock Management Personnel[cite: 9].</p>
                         <ul>
-                            <li><strong>Authentication:</strong> Access to primary Sage ERP and SQL database servers hosted at Cape Town HQ requires Multi-Factor Authentication (MFA) and Role-Based Access Control (RBAC).</li>
-                            <li><strong>Session Timeouts:</strong> Inactive user sessions on requisition and inventory terminals automatically terminate after 15 minutes of inactivity.</li>
+                            <li><strong>Authentication:</strong> Access to primary Sage ERP and SQL database servers hosted at Cape Town HQ requires Multi-Factor Authentication (MFA) and Role-Based Access Control (RBAC)[cite: 9].</li>
+                            <li><strong>Session Timeouts:</strong> Inactive user sessions on requisition and inventory terminals automatically terminate after 15 minutes of inactivity[cite: 9].</li>
                         </ul>
                     </div>
                 </article>
@@ -97,10 +103,10 @@
                         <h3>Cold-Chain IoT Sensor & Temperature Logging Protocol</h3>
                     </div>
                     <div class="sop-card-body">
-                        <p><strong>Scope:</strong> Regional Cold-Storage Facilities (Gqeberha, Durban, Cape Town, Polokwane).</p>
+                        <p><strong>Scope:</strong> Regional Cold-Storage Facilities (Gqeberha, Durban, Cape Town, Polokwane)[cite: 9].</p>
                         <ul>
-                            <li><strong>Telemetry Intervals:</strong> Refrigerator and freezer telemetry sensors must log ambient temperatures every 30 seconds to the local gateway.</li>
-                            <li><strong>Threshold Escalation:</strong> Temperature deviations above -18°C in frozen bays or above 4°C in fresh dairy bays trigger immediate SMS/Email alerts to facility supervisors and regional IT support.</li>
+                            <li><strong>Telemetry Intervals:</strong> Refrigerator and freezer telemetry sensors must log ambient temperatures every 30 seconds to the local gateway[cite: 9].</li>
+                            <li><strong>Threshold Escalation:</strong> Temperature deviations above -18°C in frozen bays or above 4°C in fresh dairy bays trigger immediate SMS/Email alerts to facility supervisors and regional IT support[cite: 9].</li>
                         </ul>
                     </div>
                 </article>
@@ -112,10 +118,10 @@
                         <h3>Disaster Recovery & Daily Database Backup Routine</h3>
                     </div>
                     <div class="sop-card-body">
-                        <p><strong>Scope:</strong> Central Datacenter Operations & Systems Administration.</p>
+                        <p><strong>Scope:</strong> Central Datacenter Operations & Systems Administration[cite: 9].</p>
                         <ul>
-                            <li><strong>Backup Schedule:</strong> Full database backups execute daily at 23:00 SAST; transaction log backups run hourly between 06:00 and 18:00 SAST.</li>
-                            <li><strong>Offsite Replication:</strong> Backups are encrypted and replicated to secondary cloud storage and verified for integrity weekly.</li>
+                            <li><strong>Backup Schedule:</strong> Full database backups execute daily at 23:00 SAST; transaction log backups run hourly between 06:00 and 18:00 SAST[cite: 9].</li>
+                            <li><strong>Offsite Replication:</strong> Backups are encrypted and replicated to secondary cloud storage and verified for integrity weekly[cite: 9].</li>
                         </ul>
                     </div>
                 </article>

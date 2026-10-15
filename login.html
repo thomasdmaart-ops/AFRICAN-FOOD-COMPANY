@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Portal Login | African Foods Company</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link both validation and authentication scripts -->
+    <script src="./javascript/validation.js" defer></script>
+    <script src="./javascript/auth.js" defer></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-flex">
+            <div class="logo">
+                <h1>African Foods Company Ltd</h1>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">&larr; Back to Public Site</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="max-width: 450px; margin: 50px auto;">
+        <section class="page-title" style="text-align: center;">
+            <h2>Employee Portal Login</h2>
+            <p>Access restricted strictly to authorized staff members for viewing IT SOPs.</p>
+        </section>
+
+        <!-- Form triggers handleLogin from auth.js after validation.js checks pass -->
+        <form id="loginForm" onsubmit="handleLogin(event)" style="background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <div id="loginError" style="color: #d9534f; background: #f9d6d5; padding: 10px; border-radius: 4px; display: none; margin-bottom: 15px; text-align: center; font-weight: bold; font-size: 14px;"></div>
+            
+            <div class="form-group" style="margin-bottom: 15px;">
+                <label for="username">Employee Email / ID:</label>
+                <input type="text" id="username" class="form-input" placeholder="staff@africanfoods.co.za">
+            </div>
+
+            <div class="form-group" style="margin-bottom: 20px;">
+                <label for="password">Password:</label>
+                <input type="password" id="password" class="form-input" placeholder="••••••••">
+            </div>
+
+            <button type="submit" class="btn btn-gold" style="width: 100%;">Sign In to SOP Portal</button>
+        </form>
+    </main>
+</body>
+</html>

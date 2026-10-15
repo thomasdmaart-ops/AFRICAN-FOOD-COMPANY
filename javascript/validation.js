@@ -77,3 +77,47 @@ function clearErrors(formElement) {
     const errorMsgs = formElement.querySelectorAll('.error-msg');
     errorMsgs.forEach(msg => msg.remove());
 }
+// ./javascript/validation.js
+
+document.addEventListener("DOMContentLoaded", function () {
+    const loginForm = document.getElementById("loginForm");
+    
+    if (loginForm) {
+        loginForm.addEventListener("submit", function (event) {
+            const emailInput = document.getElementById("username");
+            const passwordInput = document.getElementById("password");
+            const errorDiv = document.getElementById("loginError");
+
+            // Reset error state
+            errorDiv.style.display = "none";
+            errorDiv.textContent = "";
+
+            // Trim values
+            const email = emailInput.value.trim();
+            const password = passwordInput.value;
+
+            // Validation: Check if fields are empty
+            if (!email || !password) {
+                event.preventDefault();
+                showError("All fields are required. Please fill in your email and password.");
+                return;
+            }
+
+            // Validation: Basic email format check
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                event.preventDefault();
+                showError("Please enter a valid email address format (e.g., staff@africanfoods.co.za).");
+                return;
+            }
+        });
+    }
+});
+
+function showError(message) {
+    const errorDiv = document.getElementById("loginError");
+    if (errorDiv) {
+        errorDiv.textContent = message;
+        errorDiv.style.display = "block";
+    }
+}
